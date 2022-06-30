@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .myDiv{
   border: 5px outset rgb(15, 218, 99);
   background-color: #2b2929;    
@@ -68,3 +69,75 @@ body{
     color: #09f069;
 }
 
+=======
+.myDiv{
+  border: 5px outset rgb(15, 218, 99);
+  background-color: #2b2929;    
+  text-align: center;
+  line-height:30px
+}
+
+.button input[type=button], input[type=submit], input[type=reset] {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.btn-3d {
+  display: inline-block;
+  padding: 15px 10px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+
+.btn-3d.green {
+  background-color: #82c8a0;
+  box-shadow: 0 0 0 1px #82c8a0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 8px 0 0 rgba(126, 194, 155, .7),
+        0 8px 0 1px rgba(0,0,0,.4),
+        0 8px 8px 1px rgba(0,0,0,0.5);}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+input[type=text] {
+    background-color: #20c256;
+    width: 200px;
+    height: 50px; 
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: x-large;
+  }
+body{
+    font-family: 'Prompt', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #2b2929;
+    color: #09f069;
+}
+
+>>>>>>> 52e1a487435cc63cea88a5cfb272c1b77e5b5ac0
