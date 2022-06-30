@@ -74,7 +74,7 @@ $name = $_GET["name"];
         imagettftext($image,34,0,165,520,$color,"font/TEST1.TTF",$j6);
         imagettftext($image,34,0,245,520,$color,"font/TEST1.TTF",$j7);
         imagettftext($image,34,0,325,520,$color,"font/TEST1.TTF",$j8);
-        imagettftext($image,64,0,465,490,$color,"font/TEST1.TTF","$num");
+        imagettftext($image,64,0,465,490,$color,"font/TEST1.TTF","$num1");
         imagettftext($image,12,0,500,35,$color,"font/TEST1.TTF",$datetime);
         //  imagejpeg($image);
         imagejpeg($image,"textOverlay.jpg", 100);
