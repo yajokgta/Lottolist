@@ -9,7 +9,7 @@
 <title>สร้างโพยหวย</title>
 </head>
 <body>
-<center><a href="http://localhost/textOverlay.jpg" target="_blank"><img src="textOverlay.jpg" width="600" height="600"></img></a></center>
+<center><a href="http://localhost/lt/textOverlay.jpg" target="_blank"><img src="textOverlay.jpg" width="600" height="600"></img></a></center>
   <center>
 <form method="post">
 
@@ -52,9 +52,9 @@
         <td><input type="text" name="num" id="num" maxlength="1" ></td>
         </tr>
     </table></center>
-  <a href="http://localhost/generate.php?name=<?php echo $_GET['name'];?>"  class="btn-3d green">กดที่นี้เพื่อสร้างเอง</a>
-  <a href="http://localhost/random.php?name=<?php echo $_GET['name'];?>"  class="btn-3d green">กดที่นี้เพื่อสุ่ม</a>
-  <a href="http://localhost/" class="btn-3d green" onClick="window.location.reload();">กลับหน้าหลัก</a>
+  <a href="http://localhost/lt/generate.php?name=<?php echo $_GET['name'];?>"  class="btn-3d green">กดที่นี้เพื่อสร้างเอง</a>
+  <a href="http://localhost/lt/random.php?name=<?php echo $_GET['name'];?>"  class="btn-3d green">กดที่นี้เพื่อสุ่ม</a>
+  <a href="http://localhost/lt/" class="btn-3d green" onClick="window.location.reload();">กลับหน้าหลัก</a>
 </form><br>
 
 
