@@ -9,7 +9,7 @@
 <title>สร้างโพยหวย</title>
 </head>
 <body>
-<center><a href="http://localhost/lt/textOverlay.jpg" target="_blank"><img src="textOverlay.jpg" width="600" height="600"></img></a></center>
+<center><div class="csDiv"><a href="http://localhost/lt/textOverlay.jpg" target="_blank"><img src="textOverlay.jpg" width="600" height="600"></img></a></div></center>
   <center>
 <form method="post">
 
