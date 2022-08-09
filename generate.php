@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 <?php
-
 $rood = $_POST['rood'];
 $n1 = $_POST['n1'];
 $n2 = $_POST['n2'];
@@ -42,5 +40,6 @@ $name = $_GET['name'];
       //  imagejpeg($image);
         imagejpeg($image,"textOverlay.jpg", 100);
         header("Location: main.php?name=".$name);
-      
+ 
+        
 ?>
