@@ -17,7 +17,6 @@ $x7 = rand(0,9);
 $n7 = rand(0,9);
 $x8 = rand(0,9);
 $n8 = rand(0,9);
-$num = rand(0,9);
 $j1 = "$x1$n1";
 $j2 = "$x2$n2";
 $j3 = "$x3$n3";
@@ -28,6 +27,8 @@ $j7 = "$x7$n7";
 $j8 = "$x8$n8";
 $rood = "$num1-$num2";
 $name = $_GET["name"];
+$nen = rand(0,9);
+$num = 0;
 
         header('Content-Type: image/jpeg');
         date_default_timezone_set("Asia/Bangkok");
@@ -40,6 +41,14 @@ $name = $_GET["name"];
         $text_width = abs($box[2]) - abs($box[0]);
         $image_width = imagesx($image);
         $x = ($image_width - $text_width) / 2;
+        if ($nen <= 4)
+        {
+                $num = $num1;
+        }
+        if ($nen >=5)
+        {
+                $num = $num2;
+        }
 
         $datetime = date("d/m/2565");
         imagettftext($image,$size,0,$x,285,$color,$font,$name);
