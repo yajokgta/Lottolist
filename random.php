@@ -32,15 +32,20 @@ $num = 0;
 
         header('Content-Type: image/jpeg');
         date_default_timezone_set("Asia/Bangkok");
+        $datetime = date("d/m/2565");
         $imgPath = 'image.jpg';
         $font = "font/TEST1.TTF";
         $image = imagecreatefromjpeg($imgPath);
-        $color = imagecolorallocate($image, 0, 0, 0);
-        $size = 26;
+        //$font_color = imagecolorallocate($image, 167, 3, 3);
+        //$stroke_color = imagecolorallocate($image, 255, 209, 0);
+        $font_color = imagecolorallocate($image, 255, 255, 255);
+        $stroke_color = imagecolorallocate($image, 0, 0, 0);
+        $size = 30;
         $box = imagettfbbox($size, 0, $font, $name);
         $text_width = abs($box[2]) - abs($box[0]);
         $image_width = imagesx($image);
         $x = ($image_width - $text_width) / 2;
+
         if ($nen <= 4)
         {
                 $num = $num1;
@@ -49,20 +54,26 @@ $num = 0;
         {
                 $num = $num2;
         }
+        function imagettfstroketext(&$image, $size, $angle, $xx, $y, &$textcolor, &$strokecolor, $fontfile, $text, $px) {
+                for($c1 = ($xx-abs($px)); $c1 <= ($xx+abs($px)); $c1++)
+                    for($c2 = ($y-abs($px)); $c2 <= ($y+abs($px)); $c2++)
+                        $bg = imagettftext($image, $size, $angle, $c1, $c2, $strokecolor, $fontfile, $text);
+               return imagettftext($image, $size, $angle, $xx, $y, $textcolor, $fontfile, $text);
+            }
 
-        $datetime = date("d/m/2565");
-        imagettftext($image,$size,0,$x,285,$color,$font,$name);
-        imagettftext($image,42,0,235,390,$color,"font/TEST1.TTF",$rood); //วิ่งรูด
-        imagettftext($image,34,0,85,455,$color,"font/TEST1.TTF",$j1);
-        imagettftext($image,34,0,165,455,$color,"font/TEST1.TTF",$j2);
-        imagettftext($image,34,0,245,455,$color,"font/TEST1.TTF",$j3);
-        imagettftext($image,34,0,325,455,$color,"font/TEST1.TTF",$j4);
-        imagettftext($image,34,0,85,520,$color,"font/TEST1.TTF",$j5);
-        imagettftext($image,34,0,165,520,$color,"font/TEST1.TTF",$j6);
-        imagettftext($image,34,0,245,520,$color,"font/TEST1.TTF",$j7);
-        imagettftext($image,34,0,325,520,$color,"font/TEST1.TTF",$j8);
-        imagettftext($image,64,0,465,490,$color,"font/TEST1.TTF","$num");
-        imagettftext($image,12,0,500,35,$color,"font/TEST1.TTF",$datetime);
+        
+        imagettfstroketext($image,$size,0,$x,300,$font_color,$stroke_color,$font,$name,2);
+        imagettfstroketext($image,40,0,235,385,$font_color,$stroke_color,"font/TEST1.TTF",$rood,2); //วิ่งรูด
+        imagettfstroketext($image,34,0,85,455,$font_color,$stroke_color,"font/TEST1.TTF",$j1,2);
+        imagettfstroketext($image,34,0,165,455,$font_color,$stroke_color,"font/TEST1.TTF",$j2,2);
+        imagettfstroketext($image,34,0,245,455,$font_color,$stroke_color,"font/TEST1.TTF",$j3,2);
+        imagettfstroketext($image,34,0,325,455,$font_color,$stroke_color,"font/TEST1.TTF",$j4,2);
+        imagettfstroketext($image,34,0,85,520,$font_color,$stroke_color,"font/TEST1.TTF",$j5,2);
+        imagettfstroketext($image,34,0,165,520,$font_color,$stroke_color,"font/TEST1.TTF",$j6,2);
+        imagettfstroketext($image,34,0,245,520,$font_color,$stroke_color,"font/TEST1.TTF",$j7,2);
+        imagettfstroketext($image,34,0,325,520,$font_color,$stroke_color,"font/TEST1.TTF",$j8,2);
+        imagettfstroketext($image,74,0,454,505,$font_color,$stroke_color,"font/TEST1.TTF","$num",2);
+        imagettfstroketext($image,12,0,500,35,$font_color,$stroke_color,"font/TEST1.TTF",$datetime,2);
         //  imagejpeg($image);
         imagejpeg($image,"textOverlay.jpg", 100);
         header("Location: main.php?name=".$name);
