@@ -36,9 +36,11 @@ $num = 0;
         $imgPath = 'image.jpg';
         $font = "font/TEST1.TTF";
         $image = imagecreatefromjpeg($imgPath);
+        //$font_color = imagecolorallocate($image, 167, 3, 3);
+        //$stroke_color = imagecolorallocate($image, 255, 209, 0);
         $font_color = imagecolorallocate($image, 255, 255, 255);
         $stroke_color = imagecolorallocate($image, 0, 0, 0);
-        $size = 26;
+        $size = 30;
         $box = imagettfbbox($size, 0, $font, $name);
         $text_width = abs($box[2]) - abs($box[0]);
         $image_width = imagesx($image);
@@ -60,8 +62,8 @@ $num = 0;
             }
 
         
-        imagettfstroketext($image,$size,0,$x,285,$font_color,$stroke_color,$font,$name,2);
-        imagettfstroketext($image,42,0,235,390,$font_color,$stroke_color,"font/TEST1.TTF",$rood,2); //วิ่งรูด
+        imagettfstroketext($image,$size,0,$x,300,$font_color,$stroke_color,$font,$name,2);
+        imagettfstroketext($image,40,0,235,385,$font_color,$stroke_color,"font/TEST1.TTF",$rood,2); //วิ่งรูด
         imagettfstroketext($image,34,0,85,455,$font_color,$stroke_color,"font/TEST1.TTF",$j1,2);
         imagettfstroketext($image,34,0,165,455,$font_color,$stroke_color,"font/TEST1.TTF",$j2,2);
         imagettfstroketext($image,34,0,245,455,$font_color,$stroke_color,"font/TEST1.TTF",$j3,2);
@@ -70,7 +72,7 @@ $num = 0;
         imagettfstroketext($image,34,0,165,520,$font_color,$stroke_color,"font/TEST1.TTF",$j6,2);
         imagettfstroketext($image,34,0,245,520,$font_color,$stroke_color,"font/TEST1.TTF",$j7,2);
         imagettfstroketext($image,34,0,325,520,$font_color,$stroke_color,"font/TEST1.TTF",$j8,2);
-        imagettfstroketext($image,64,0,465,490,$font_color,$stroke_color,"font/TEST1.TTF","$num",2);
+        imagettfstroketext($image,74,0,454,505,$font_color,$stroke_color,"font/TEST1.TTF","$num",2);
         imagettfstroketext($image,12,0,500,35,$font_color,$stroke_color,"font/TEST1.TTF",$datetime,2);
         //  imagejpeg($image);
         imagejpeg($image,"textOverlay.jpg", 100);
